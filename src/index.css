@@ -1,13 +1,119 @@
-body {
+:root {
+  --backgroundDarkColor: hsl(207, 26%, 17%);
+  --backgroundLightColor: hsl(180, 20%, 96%);
+  --backgroundDarkSidebar: hsl(208, 26%, 23%);
+  --lightModeText: hsl(200, 15%, 8%);
+  --white:hsl(0, 0%, 100%);
+}
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Inter', sans-serif;
 }
+
+.App {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh !important;
+}
+
+.dark-mode {
+  background-color:var(--backgroundDarkColor);
+  color: var(--white);
+}
+.light-mode {
+  background-color: var(--backgroundLightColor);
+  color: var(--backgroundDarkColor);
+}
+
+.dark-modeForBtnMode {
+  background-color: #F1C40F;
+}
+.light-modeForBtnMode {
+  background-color: var(--backgroundDarkColor);
+}
+.dark-modeForBtnAdd {
+  background-color: rgba(131, 131, 155, 0.3) ;
+  color: var(--white);
+}
+.light-modeForBtnAdd {
+  background-color: rgb(240, 255, 255,0.8);
+  color:var(--lightModeText);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 70px;
+  align-items: center;
+  position: sticky;
+  top:0;
+  z-index: 5;
+}
+.header button {
+  margin-right: 2.1em;
+  width: 2.5em;
+  height: 2.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.header button:active{
+  box-shadow: 0 0 50px rgb(5, 248, 78);
+}
+
+.div-input {
+  display: flex;
+  justify-content: center;
+  height: 3.2rem;
+  margin-top: 2rem;
+}
+.div-input input {
+  width: 80%;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  font-size: large;
+  padding-left: 8px;
+}
+.div-input input:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.div-input button {
+  height: 3.2rem;
+  width: 3rem;
+  cursor: pointer;
+  border-left: none;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.div-input button:hover {
+  opacity: 0.7;
+}
+.div-input button:active{
+  box-shadow: 0 0 30px rgb(13, 30, 18);
+}
+.dark-modeForDivInput {
+  background-color:var(--backgroundLightColor);
+  color: black;
+}
+
+.light-modeForDivInput {
+  background-color: rgb(245, 243, 243);
+  color: black;
+}
+
+
+
+
