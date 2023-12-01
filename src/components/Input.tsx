@@ -58,7 +58,7 @@ export default function Input() {
     if(isFetching) {
         content = <p id="loading-fallback">Fetching process...</p>;
       }
-    console.log(wordData);
+    
     return(
         <>
         <form onSubmit={handleSubmit} className="div-input">
