@@ -1,10 +1,10 @@
-import { FormEvent, useRef, useState } from "react";
-import searchIcon from "../img/icons8-search-24.png";
+import { FormEvent, useRef } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { fetchData } from "../util/http";
 import { WordDataItem, setWordData } from "../redux/word-slice";
-import { API_DATA } from "../util/apiDataType";
+import { fetchData } from "../util/http";
+import {type API_DATA } from "../util/apiDataType";
 const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
+import searchIcon from "../img/icons8-search-24.png";
 
 
 export default function Input() {

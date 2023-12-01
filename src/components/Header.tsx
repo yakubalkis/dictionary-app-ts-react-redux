@@ -1,8 +1,8 @@
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import { setMode } from "../redux/mode-slice";
 import book from "../img/icons8-dictionary-48.png";
 import lightIcon from "../img/light-icon.png";
 import darkIcon from "../img/dark-icon.png";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
-import { setMode } from "../redux/mode-slice";
 
 export default function Header() {
     const modeType = useAppSelector(state => state.mode);
