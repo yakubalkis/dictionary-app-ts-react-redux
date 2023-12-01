@@ -3,29 +3,31 @@ import WordContent from "./WordContent";
 
 
 export default function Main() {
-
     const wordData = useAppSelector(state => state.wordData.data);
-
-    const wordContent = wordData.meanings.map((meaning) => {
+    
+    const wordContent = wordData.word !== "" ? wordData.meanings.map((meaning) => {
         return (
             <WordContent 
+                key={meaning.partOfSpeech}
                 defininitions={meaning.definitions.map(def => def.definition)} 
                 wordType={meaning.partOfSpeech} 
                 synonyms={meaning.synonyms} 
                 antonyms={meaning.antonyms} 
             />
         )
-    })
+    }) : <></> ;
+
 
     return(
         <div className="div-main">
-            <main className="main">
+            {wordData.word !== "" && 
+            (<main className="main">
             <div className="div-word-audio">
                 <div className="div-word-phonetic">
                     <h2>{wordData.word}</h2>
                     <p>{wordData.phonetic}</p>
                 </div>
-                <audio controls src={wordData.audio}></audio>
+                {(wordData.audio) && <audio controls src={wordData.audio}></audio>}
             </div>
             {wordContent}
             <div className="div-source">
@@ -36,6 +38,7 @@ export default function Main() {
                 </div>
             </div>
             </main>
+            )}
         </div>
     )
 }

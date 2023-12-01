@@ -5,12 +5,13 @@ import Main from './components/Main';
 
 function App() {
   const modeType = useAppSelector(state => state.mode);
+  const error = useAppSelector(state => state.mode.error);
 
   return (
       <div className={`App ${modeType.mode}-mode`}>
         <Header />
         <Input />
-        <Main />
+        {!error && <Main />}
       </div>
   );
 }
