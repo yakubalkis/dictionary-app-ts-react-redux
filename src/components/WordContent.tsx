@@ -8,8 +8,8 @@ type WordPropType = {
 
 export default function WordContent(props: WordPropType) {
 
-    const definitions = props.defininitions.map((def) => {
-        return <li>{def}</li>
+    const definitions = props.defininitions.map((def,i) => {
+        return <li key={i}>{def}</li>
     })
     
 
@@ -27,8 +27,8 @@ export default function WordContent(props: WordPropType) {
                     </ul>
                 </div>
                 <div className="div-synonyms_antonyms">
-                    {props.synonyms.length > 0 && <p><label>Synonyms:</label> {props.synonyms}</p>}
-                    {props.antonyms.length > 0 && <p><label>Antonyms:</label>: {props.antonyms}</p>}
+                    {props.synonyms.length > 0 && <p><label>Synonyms:</label> {props.synonyms.toString()}</p>}
+                    {props.antonyms.length > 0 && <p><label>Antonyms:</label>: {props.antonyms.toString()}</p>}
                 </div>
             </div>
         </div>
