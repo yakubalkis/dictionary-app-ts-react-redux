@@ -11,7 +11,6 @@ const BASE_URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 export default function Input() {
     const modeType = useAppSelector(state => state.mode);
-    const wordData = useAppSelector(state => state.wordData);
     const error = useAppSelector(state => state.mode.error);
     const dispatch = useAppDispatch();
     const [isFetching, setIsFetching] = useState(false);
