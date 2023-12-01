@@ -184,3 +184,23 @@ body {
 .div-synonyms_antonyms label{
   font-weight: 800;
 }
+#loading-fallback {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 3rem auto;
+}
+
+#error {
+  border: 1px solid #ff0055;
+  color: #ff0000;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+#error h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+#error p {
+  margin: 0;
+}
