@@ -108,12 +108,85 @@ body {
   background-color:var(--backgroundLightColor);
   color: black;
 }
-
 .light-modeForDivInput {
   background-color: rgb(245, 243, 243);
   color: black;
 }
 
+.div-main {
+  display: flex;
+  justify-content: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 88%;
+}
+.div-word-audio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.div-word-phonetic h2{
+  font-family: Courier, monospace;
+  font-size: 2rem;
+}
+.div-word-phonetic p{
+  color:rgb(167, 5, 248);
+}
+
+.div-content {
+  margin-top: 2.5rem;
+}
+.word-type-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+.word-type-part p {
+  font-size: 1.3rem;
+}
+.div-line{
+  height: 1px;
+  width: 88%;
+  background-color: gray;
+  border-radius: 4px;
+}
+.div-meanings p {
+  padding-bottom: 1rem;
+  margin-top: .2rem;
+  font-family: Georgia, serif;
+}
+.div-definitions {
+  margin-left: 2rem;
+}
+.div-definitions li {
+  margin-top: .5rem;
+}
+.div-source {
+  margin-top: 3rem;
+}
+.source-line {
+ width: 100%;
+}
+.source-elements {
+  margin-top: .5rem;
+}
+.source-elements label{
+  padding-right: 1rem;
+}
+.source-elements a{
+  
+}
+.div-synonyms_antonyms {
+  margin-top: 1rem;
+}
+.div-synonyms_antonyms label{
+  font-weight: 800;
+}
 
 
 
